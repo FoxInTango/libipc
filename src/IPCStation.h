@@ -9,6 +9,7 @@ class foxintangoAPI IPCStation :public mm::Allocator{
 public:
     IPCStation();
     ~IPCStation();
+    // local://
 public:
     virtual void* alloc(const unsigned int& size);
     virtual int release(const void* address);
