@@ -14,7 +14,7 @@ public:
     virtual void* alloc(const unsigned int& size);
     virtual int release(const void* address);
 public:
-    template <typename T> T* alloc(){ return 0; }
+    template <typename T> T* alloc() { T* t = alloc(sizeof(T)); return  new(t)T(); }
 };
 namespaceEnd
 #endif // !_IPC_STATION_H_foxintango
